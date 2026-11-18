@@ -8,11 +8,11 @@
 
 桌面端截图：
 
-![桌面端截图](dosc\screenshots\desktop-index.jpg)
+![桌面端截图](dosc/screenshots/desktop-index.jpg)
 
 移动端截图：
 
-![移动端截图：](dosc\screenshots\mobile-index.jpg)
+![移动端截图：](dosc/screenshots/mobile-index.jpg)
 
 基本上只要兼容OpenAI图片接口的云平台或中转站支持下面3个基本端点就能用：
 
