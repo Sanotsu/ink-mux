@@ -1,0 +1,23 @@
+# fastforge 打包配置（distribute_options.yaml）
+#
+# 用途：Windows 绿色版 zip——解压即用，7-Zip / 系统自带解压均可，无安装器。
+# 产物：dist/<版本>/InkMux-<版本>-windows.zip
+#   （artifact_name 为 mustache 模板：{{version}} 含 pubspec 的 build number，
+#     {{build_name}} 不含；{{platform}} / {{ext}} / {{name}} 同理。）
+#
+# 命令（PowerShell）：
+#   fastforge package --platform windows --targets zip `
+#     --artifact-name 'InkMux-{{version}}-{{platform}}.{{ext}}'
+#   已构建过时可加 --skip-clean 跳过 flutter clean。
+#   fastforge release 全量打包会自动读取下方顶层 artifact_name，无需再传参。
+output: dist/
+
+artifact_name: InkMux-{{version}}-{{platform}}
+
+releases:
+  - name: windows
+    jobs:
+      - name: release-windows-zip
+        package:
+          platform: windows
+          target: zip

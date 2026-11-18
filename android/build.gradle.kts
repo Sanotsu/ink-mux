@@ -1,5 +1,9 @@
 allprojects {
     repositories {
+        // // # 2026-11-15 大陆无法直接访问时可能有用
+        // // 国内镜像优先：dl.google.com / repo.maven.apache.org 直连不稳定
+        // maven { url = uri("https://maven.aliyun.com/repository/google") }
+        // maven { url = uri("https://maven.aliyun.com/repository/public") }
         google()
         mavenCentral()
     }
